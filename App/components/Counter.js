@@ -3,6 +3,8 @@ import {  Button,  StyleSheet,  Text,  View,} from 'react-native';
 
 console.log("components counter.js");
 export default class Counter extends Component {
+
+
   render() {
     console.log("render components Counter.js");
     return (
@@ -15,30 +17,19 @@ export default class Counter extends Component {
         style={styles.counter}
         onPress={this.props.reset}
         >
-        {this.props.count.toString()}
+        {this.props.count}
         </Text>
         <Button
         title="Down"
          onPress={this.props.decrement}
-        />          
-      </View>
+        />             
+     
+      
+        </View>
     );
   }
 }
 
-/*
- <Button
-          title="Up"
-          onPress={this.props.increment}/>
-        <Text
-          style={styles.counter}
-          onPress={this.props.reset}>
-          {this.props.count}
-        </Text>
-        <Button
-          title="Down"
-          onPress={this.props.decrement}/>
-          */
 const styles = StyleSheet.create({
   counter: {
     padding: 30,

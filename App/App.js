@@ -3,9 +3,11 @@ import {  Platform,  StyleSheet,  Text,  View} from 'react-native';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import store from './store';
-import CounterContainer from './containers/CounterContainer.js';
 
-//import TimerMixin from 'react-timer-mixin';
+import Containers from './containers/CounterContainer.js';
+import Timer from './containers/TimerContainer.js';
+
+import  containers  from './containers';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,35 +26,13 @@ export default class App extends Component {
            Welcome François Application
            {'\n'}New Technologie
         </Text>
-        <CounterContainer/>           
+        <Containers/>           
+        <Timer/>                       
         </View>
       </Provider>
     );
   }
 }
-
-//type Props = {};
-//export default class App extends Component<Props> {
-  /*
-export default class App extends Component{
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome François Application
-          {'\n'}New Technologie
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
-  }
-}
-*/
 
 const styles = StyleSheet.create({
   container: {

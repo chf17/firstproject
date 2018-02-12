@@ -1,5 +1,6 @@
 
 export const startTimer = (baseTime = 0) => {
+  console.log("xxxx enter action xxx")
     return {
       type: "START_TIMER",
       baseTime: baseTime,

@@ -9,10 +9,3 @@ export default combineReducers({
     counter,
     timer
 })
-/*
-const rApp = combineReducers({
-    counter,
-    timer
-})
-
-export default rApp;*/
